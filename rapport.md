@@ -8,12 +8,7 @@
 ---
 
 ## 2) Résumé
-Ce projet étudie la détection d’intrusions réseau en combinant deux approches de Machine Learning :
-
-- une approche **supervisée** avec `RandomForestClassifier` ;
-- une approche **non supervisée** avec `KMeans`.
-
-L’évaluation est réalisée sur le dataset **NSL-KDD** (train + test officiels). Les résultats montrent qu’un modèle supervisé reste plus pertinent pour la classification finale des attaques, tandis que le clustering est utile pour l’exploration d’anomalies.
+On va utiliser ce dataset pour la **classification** des attaques  d'une part et pour la **detection des anomalies** d'autre part. Nous allons donc utiliser une approche **supervisée** (Random Forest) pour la classification et une approche **non supervisée** (K-Means) pour la détection d’intrusions dans le dataset NSL-KDD.
 
 ---
 
@@ -56,6 +51,8 @@ Le dataset NSL-KDD est une version améliorée de KDD’99 (moins de redondance,
 3. Encodage des variables catégorielles (one-hot encoding).
 4. Alignement des colonnes entre train et test après encodage.
 5. Standardisation (`StandardScaler`) pour K-Means.
+
+
 
 ### 5.2 Modèles entraînés
 #### A) Random Forest (supervisé)
